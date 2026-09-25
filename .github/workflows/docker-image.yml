@@ -17,10 +17,10 @@ jobs:
     - name: checking if build is complete
       run: echo "build is complete"
     - name: running the Docker image
-      run: docker run -d -p 3000:3000 --name conatiner my-image-name:latest
-    - name: checking if push is complete
-      run: echo "push is complete"    
+      run: docker run -d -p 4000:4000 --name conatiner my-image-name:latest
+    - name: checking if run is complete
+      run: echo "run is complete"    
     - name: testing the docker container
       run: |
-        sleep 5  
-        curl http://localhost:3000  
+        sleep 10  
+        curl http://localhost:4000  
