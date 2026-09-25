@@ -20,3 +20,5 @@ jobs:
       run: docker run -d -p 3000:3000 --name conatiner my-image-name:latest
     - name: checking if push is complete
       run: echo "push is complete"    
+    - name: testing the docker container
+      run: curl http://localhost:3000  
