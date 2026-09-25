@@ -13,10 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-image-name:latest
     - name: checking if build is complete
       run: echo "build is complete"
-    - name: Push the Docker image
-      run: docker run -d -p 3000:3000 --name my-image-name:$(date +%s) my-image-name:$(date +%s)
+    - name: running the Docker image
+      run: docker run -d -p 3000:3000 --name conatiner my-image-name:latest
     - name: checking if push is complete
       run: echo "push is complete"    
