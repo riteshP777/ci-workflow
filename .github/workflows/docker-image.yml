@@ -21,4 +21,6 @@ jobs:
     - name: checking if push is complete
       run: echo "push is complete"    
     - name: testing the docker container
-      run: curl http://localhost:3000  
+      run: |
+        sleep 5  
+        curl http://localhost:3000  
