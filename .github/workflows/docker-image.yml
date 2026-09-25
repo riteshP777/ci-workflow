@@ -16,3 +16,7 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: checking if build is complete
       run: echo "build is complete"
+    - name: Push the Docker image
+      run: docker run -d -p 3000:3000 --name my-image-name:$(date +%s) my-image-name:$(date +%s)
+    - name: checking if push is complete
+      run: echo "push is complete"    
